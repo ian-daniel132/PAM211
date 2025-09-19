@@ -1,11 +1,7 @@
 
 
-//Se usa let en lugar para poder cambiar el valor de las variables 
-//para que de esta forma se muestre la nueva informacion 
+//lo que se busca aqui era cambiar la funcion de una tradicional 
+// a una funcion de flecha.
 
-Let nombre = "Armando";
-Let edad = 25; 
-nombre = "Ana Maria";
-edad = 30; 
-const saludo = 'Hola, ${nombre}, Tinenes ${edad} años';
-console.log(saludo)
+const cuadrado = (numero) => numero * numero
+
