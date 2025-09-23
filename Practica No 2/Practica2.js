@@ -1,14 +1,20 @@
 
-const productos = [ 
-    { nombre: "Laptop", precio: 1500 },
-    { nombre: "Teclado", precio: 1200},
-    { nombre: "Mouse", precio: 50},
-    { nombre: "Monitor", precio: 300},
-    { nombre: "Tablet", precio: 800}
-]; 
+const personas = [
+    { nombre: "Ian", edad: 21 },
+    { nombre: "Sergio", edad: 29 },
+    { nombre: "Goku", edad: 37 }
+];
 
-const productosCaros = productos
-    .filter(producto => producto.precio > 1000)
-    .map(producto => producto.nombre); 
+// 1. Buscar a Goku utilizando un .find 
+const personaGoku = personas.find(persona => persona.nombre === "Goku");
+console.log("Persona encontrada:", personaGoku);
 
-console.log(productosCaros); 
+// 2. Usamos .forEach para imprimir el nombre y edad de cada persona del arreglo
+console.log("\nLista de personas:");
+personas.forEach(persona => {
+    console.log(persona.nombre + " tiene " + persona.edad + " años"); 
+});
+
+// 3.- Utilizar un .reduce para sumar todas las edades y obtener un total
+const totalEdades = personas.reduce((acumulador, persona) => acumulador + persona.edad, 0);
+console.log("\nTotal de edades: " + totalEdades); 
